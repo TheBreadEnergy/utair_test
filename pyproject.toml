@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "utair-test"
+version = "1.0.0"
+description = "The problem of constructing an optimal air route"
+authors = ["TheBreadEnergy <thebreadenergy@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.8.0"
+faker = "^28.1.0"
+flake8 = "^7.1.1"
+isort = "^5.13.2"
+pre-commit = "^3.8.0"
+pytest = "^8.3.2"
+
+[tool.black]
+line-length = 120
+
+[tool.flake8]
+max-line-length = 120
+
+[tool.isort]
+profile = "black"
+line_length = 120
+
+[tool.pytest]
+testpaths = [
+    "tests",
+]
+
+[tool.poetry.scripts]
+main = "src.main:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
